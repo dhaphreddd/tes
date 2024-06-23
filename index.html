@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog PDF</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .pdf-container {
+            display: none;
+            width: 100%;
+            height: 600px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>PDF INDEX</h1>
+<ul>
+    <li><a href="#" onclick="openPDF('pdfs/Ayat Quran.pdf')">File PDF 1</a></li>
+    <li><a href="#" onclick="openPDF('pdfs/Presentasi Web.pdf')">File PDF 2</a></li>
+    <li><a href="#" onclick="openPDF('pdfs/Sejarah Perkembagan Lembaga Pendidikan Madrasah.pdf')">File PDF 3</a></li>
+</ul>
+<div id="pdfViewer" class="pdf-container">
+    <iframe id="pdfFrame" width="100%" height="100%"></iframe>
+</div>
+
+<script>
+    function openPDF(pdfPath) {
+        document.getElementById('pdfViewer').style.display = 'block';
+        document.getElementById('pdfFrame').src = pdfPath;
+    }
+</script>
+</body>
+</html>
